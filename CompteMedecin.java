@@ -14,7 +14,9 @@ public class CompteMedecin {
 	
 	
 	
-	
+	public CompteMedecin() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	public void setUsername(String username) {
 		this.username = username;
@@ -46,5 +48,8 @@ public class CompteMedecin {
 	public void setListe_pat_a_traiter(Patient[][] liste_pat_a_traiter) {
 		this.liste_pat_a_traiter = liste_pat_a_traiter;
 	}
-
+	
+	public String getId_compte() {
+		return id_compte;
+	}
 }

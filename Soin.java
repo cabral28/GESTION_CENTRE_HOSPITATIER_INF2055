@@ -4,12 +4,15 @@ public class Soin {
 	public int id_soin;
 	public String nom_soin;
 	public String dose;
-	public ArrayList<Consultation> consultation;
+	public int id_consultation;
 	
 	
 	
-	public void soin() {
-		
+	public void setSoin(int id_soin, String nom_soin, String dose, int id_consultation) {
+		this.id_soin = id_soin;
+		this.nom_soin=nom_soin;
+		this.dose=dose;
+		this.id_consultation=id_consultation;
 		
 	}
 }

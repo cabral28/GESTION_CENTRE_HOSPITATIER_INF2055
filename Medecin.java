@@ -1,8 +1,20 @@
-
 public class Medecin extends Personne {
-	public String poste;
-	public CompteMedecin compte;
-	public int id_medecin;
+
+	String poste;
+	CompteMedecin compte;
+	
 	//public InterfaceDBCompte dbCompte;
 	
+	
+	
+public Medecin(String poste, int id, String nom, String prenom, String date_nais, char sexe){
+        
+        super(id, nom, prenom, date_nais, sexe);
+        this.poste = poste;
+    }
+	
+
+public void setCompte(){ 
+    
+}
 }
