@@ -31,6 +31,8 @@ public class CONNEXION extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        close = new javax.swing.JLabel();
+        mini = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -41,10 +43,31 @@ public class CONNEXION extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1368, 724));
         setMinimumSize(new java.awt.Dimension(1368, 724));
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1368, 724));
         setSize(new java.awt.Dimension(1368, 724));
         setType(java.awt.Window.Type.POPUP);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        close.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        close.setForeground(new java.awt.Color(255, 0, 0));
+        close.setText("X");
+        close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeMouseClicked(evt);
+            }
+        });
+        getContentPane().add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 10, 30, 30));
+
+        mini.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        mini.setForeground(new java.awt.Color(255, 255, 255));
+        mini.setText("-");
+        mini.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                miniMouseClicked(evt);
+            }
+        });
+        getContentPane().add(mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 0, 40, 40));
 
         jPanel1.setBackground(java.awt.Color.white);
         jPanel1.setBorder(new javax.swing.border.LineBorder(java.awt.Color.white, 20, true));
@@ -59,7 +82,7 @@ public class CONNEXION extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Source Sans Pro Black", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 204, 255));
         jButton1.setText("CREER UN COMPTE");
-        jButton1.setBorder(null);
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 255), 2, true));
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -75,7 +98,7 @@ public class CONNEXION extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Source Sans Pro Black", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 204, 255));
         jButton2.setText("CONNECTEZ-VOUS A VOTRE COMPTE");
-        jButton2.setBorder(null);
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 255), 2, true));
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -128,6 +151,7 @@ public class CONNEXION extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -151,6 +175,16 @@ public class CONNEXION extends javax.swing.JFrame {
         h.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void miniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miniMouseClicked
+        // TODO add your handling code here:
+        this.setState(CONNEXION.ICONIFIED);
+    }//GEN-LAST:event_miniMouseClicked
+
+    private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_closeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -180,7 +214,7 @@ public class CONNEXION extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CONNEXION().setVisible(true);
@@ -189,11 +223,13 @@ public class CONNEXION extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel close;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel mini;
     // End of variables declaration//GEN-END:variables
 }

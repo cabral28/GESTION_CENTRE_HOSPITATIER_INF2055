@@ -27,6 +27,8 @@ public class creerCompte extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        close = new javax.swing.JLabel();
+        mini = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -46,8 +48,29 @@ public class creerCompte extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1368, 724));
         setMinimumSize(new java.awt.Dimension(1368, 724));
+        setUndecorated(true);
         setSize(new java.awt.Dimension(1368, 724));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        close.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        close.setForeground(new java.awt.Color(255, 0, 0));
+        close.setText("X");
+        close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeMouseClicked(evt);
+            }
+        });
+        getContentPane().add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 10, 30, 30));
+
+        mini.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        mini.setForeground(new java.awt.Color(255, 255, 255));
+        mini.setText("-");
+        mini.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                miniMouseClicked(evt);
+            }
+        });
+        getContentPane().add(mini, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 0, 40, 40));
 
         jPanel1.setBackground(java.awt.Color.white);
         jPanel1.setBorder(new javax.swing.border.LineBorder(java.awt.Color.white, 20, true));
@@ -169,7 +192,18 @@ public class creerCompte extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_closeMouseClicked
+
+    private void miniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_miniMouseClicked
+        // TODO add your handling code here:
+        this.setState(CONNEXION.ICONIFIED);
+    }//GEN-LAST:event_miniMouseClicked
 
     /**
      * @param args the command line arguments
@@ -207,6 +241,7 @@ public class creerCompte extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel close;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -222,5 +257,6 @@ public class creerCompte extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel mini;
     // End of variables declaration//GEN-END:variables
 }
