@@ -1,33 +1,80 @@
+package Model;
 
 public class Dossier {
-	
-	public Consultation[] liste_cons[];
-	public Consultation[] liste_cons_traiter[];
-	public Consultation[] liste_cons_a_faire[];
-	public boolean dos_traiter;
-	public String nom_dossier;
-	//InterfaceDBConsultation dbCon;
-	
-	
-	public void cons(Consultation[][] liste_cons) {
-		this.liste_cons = liste_cons;
-	}
-	
-	public void setListe_cons(Consultation[][] liste_cons) {
-		this.liste_cons = liste_cons;
-	}
-	
-	private void set_examiner() {
-		// TODO Auto-generated method stub
 
+	private String Num_Dossier;
+	private String Antecedents;
+	private String Recomandations;
+	private String Ordonnance;
+	private String Resultats;
+	private String Responsables;
+
+	public Dossier() {}
+	
+	public Dossier(String NoDoss,String antecedents,String recomandations,String ordonnance,String responsables,String resultats){
+	   this.Num_Dossier=NoDoss;
+	   this.Antecedents=antecedents;
+	   this.Recomandations=recomandations;
+	   this.Ordonnance=ordonnance;
+	   this.Responsables=responsables;
+	   this.Resultats=resultats;
+	}
+
+	public String getResponsables() {
+		return Responsables;
+	}
+
+	public void setResponsables(String responsables) {
+		Responsables = responsables;
+	}
+
+	public String getOrdonance() {
+		return Ordonnance;
+	}
+
+	public void setOrdonance(String ordonance) {
+		Ordonnance = ordonance;
+	}
+
+	public String getNum_Dossier() {
+		return Num_Dossier;
+	}
+
+	public void setNum_Dossier(String num_Dossier) {
+		Num_Dossier = num_Dossier;
+	}
+
+	public String getRecomandations() {
+		return Recomandations;
+	}
+
+	public void setRecomandations(String recomandations) {
+		Recomandations = recomandations;
+	}
+
+	public String getResultats() {
+		return Resultats;
+	}
+
+	public void setResultats(String resultats) {
+		Resultats = resultats;
 	}
 	
-	public void setListe_cons_traiter(Consultation[][] liste_cons_traiter) {
-		this.liste_cons_traiter = liste_cons_traiter;
+	public void Visualiser() {
+		System.out.println("Num Dossier "+this.Num_Dossier+"\n"
+				           +"Recomandations "+this.Recomandations +"\n"
+				           +"Ordonnance "+this.Ordonnance+"\n"
+				           +"Responsables "+this.Responsables+"\n");
 	}
+
+	public String getAntecedents() {
+		return Antecedents;
+	}
+
+	public void setAntecedents(String antecedents) {
+		Antecedents = antecedents;
+	}
+
 	
-	public void setListe_cons_a_faire(Consultation[][] liste_cons_a_faire) {
-		this.liste_cons_a_faire = liste_cons_a_faire;
-	}
 
 }
